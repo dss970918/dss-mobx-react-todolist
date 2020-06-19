@@ -7,10 +7,10 @@ import moment from 'moment'
 
 
 class AppStore {
-    @observable time = '2019'
+    @observable time = ''
     @observable todos = []
     @computed get desc() {
-        return `${this.time} 还有 ${this.todos.length} 条任务待完成`
+        return `${this.time} 您已经查看了 ${this.todos.length} 次时间`
     }
     @action addTodo(todo) {
         this.todos.push(todo)

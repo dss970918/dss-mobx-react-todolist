@@ -15,7 +15,7 @@ export default class Home extends React.Component {
         let { store } = this.props
         switch (type) {
             case 'add':
-                store.addTodo('一条新任务')
+                store.addTodo(Date())
                 break;
             case 'delete':
                 store.deleteTodo()
@@ -32,9 +32,9 @@ export default class Home extends React.Component {
             <div className='home'>
                 <h1>在React中使用mobx</h1>
                 <div>{store.desc}</div>
-                <button onClick={this.handleTodos.bind(this,'add')}>添加一条任务</button>
-                <button onClick={this.handleTodos.bind(this,'delete')}>删除一条任务</button>
-                <button onClick={this.handleTodos.bind(this,'reset')}>任务重置</button>
+                <button onClick={this.handleTodos.bind(this,'add')}>查看当前时间</button>
+                <button onClick={this.handleTodos.bind(this,'delete')}>删除最近的时间</button>
+                <button onClick={this.handleTodos.bind(this,'reset')}>时间列表清空</button>
                 {
                     store.todos.map((ele,index,arr) => {
                         return(
