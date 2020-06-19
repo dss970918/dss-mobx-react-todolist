@@ -7,7 +7,7 @@ import moment from 'moment'
 
 
 class AppStore {
-    @observable time = ''
+    @observable time = '1'
     @observable todos = []
     @computed get desc() {
         return `${this.time} 您已经查看了 ${this.todos.length} 次时间`
